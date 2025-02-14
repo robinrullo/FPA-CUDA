@@ -1,9 +1,13 @@
+#include <iostream>
+
 #include <cuda_runtime.h>
 #include <cuda.h>
 #include <curand_kernel.h>
 #include <math_constants.h>
 
-#include "kernel.h"
+#include "kernel.cuh"
+
+#include <iomanip>
 
 #define gpuErrorCheck(ans) { gpuAssert((ans), __FILE__, __LINE__); }
 
@@ -209,7 +213,7 @@ __global__ void kernelUpdateGBest(const double *pBests, double *gBest) {
     }
 }
 
-extern "C" void cuda_pso(double *positions, double *pBests, double *gBest) {
+void cuda_pso(double *positions, double *pBests, double *gBest) {
     constexpr int size = POPULATION_SIZE * NUM_OF_DIMENSIONS;
 
     // declare all the arrays on the device
@@ -231,7 +235,7 @@ extern "C" void cuda_pso(double *positions, double *pBests, double *gBest) {
 
     // Thread & Block number
     int threadsNum = 32;
-    int blocksNum = ceil(size / threadsNum);
+    int blocksNum = ceil(size / (double) threadsNum);
 
     // Copy particle datas from host to device
     /**

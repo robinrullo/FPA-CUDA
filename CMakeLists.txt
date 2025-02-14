@@ -1,18 +1,14 @@
 cmake_minimum_required(VERSION 3.30)
+project(CudaFPA LANGUAGES CUDA CXX)
 
-set(CMAKE_CXX_STANDARD 14)
+set(CMAKE_CUDA_STANDARD 20)
+set(CMAKE_CUDA_ARCHITECTURES "native") # GTX1050 - Architecture 6.1
 
-set(CMAKE_CUDA_COMPILER "/usr/local/cuda/bin/nvcc")
-set(CMAKE_CUDA_STANDARD 14)
-set(CMAKE_CUDA_STANDARD_REQUIRED ON)
-set(CMAKE_CUDA_ARCHITECTURES "61") # GTX1050 - Architecture 6.1
-
-project(CudaFPA2024_2025_02 LANGUAGES CUDA CXX)
-
-include_directories(.)
-
-add_executable(CudaFPA2024_2025_02
-        kernel.cpp
+add_executable(CudaFPA
+        main.cpp
         kernel.cu
-        kernel.h
-        main.cpp)
+        kernel.cuh
+        kernel.cpp
+)
+set_target_properties(CudaFPA PROPERTIES
+        CUDA_SEPARABLE_COMPILATION ON)

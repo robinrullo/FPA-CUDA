@@ -1,23 +1,12 @@
-#include "kernel.h"
+#include "kernel.cuh"
+#include <cmath>
 
-/* Objective function
-0: Levy 3-dimensional
-1: Shifted Rastigrin's Function
-2: Shifted Rosenbrock's Function
-3: Shifted Griewank's Function
-4: Shifted Sphere's Function
-*/
-// parametre 1 individu avec ses positions
-/**
- * Runs on the GPU, called from the GPU.
- **/
 double host_sphere_func(const double *solution) {
     double sum = 0.0;
     for (int i = 0; i < NUM_OF_DIMENSIONS; ++i) {
         double x = solution[i];
         sum += x * x;
     }
-    //printf("sum: %f\n", sum);
     return sum;
 }
 
@@ -55,13 +44,11 @@ double host_ackley_func(const double *solution) {
     return term1 + term2 + 20.0 + M_E;
 }
 
-/* Objective function
-0: Levy 3-dimensional
-1: Shifted Rastigrin's Function
-2: Shifted Rosenbrock's Function
-3: Shifted Griewank's Function
-4: Shifted Sphere's Function
-*/
+/**
+ * Compute the fitness of a solution
+ * @param solution Array of positions
+ * @return Fitness
+ */
 double host_fitness_function(const double *solution) {
     switch (SELECTED_OBJ_FUNC) {
         case 0:
@@ -75,12 +62,20 @@ double host_fitness_function(const double *solution) {
     }
 }
 
-// Obtenir un random entre low et high
+/**
+ * Get a random number between given range
+ * @param low Low bound
+ * @param high High bound
+ * @return random number
+ */
 double getRandom(double low, double high) {
     return low + ((high - low) + 1) * rand() / (RAND_MAX + 1.0);
 }
 
-// Obtenir un random entre 0.0f and 1.0f inclusif
+/**
+ * Get a random number between 0.0 and 1.0f
+ * @return random number
+ */
 double getRandomClamped() {
     return static_cast<double>(rand()) / RAND_MAX;
 }
