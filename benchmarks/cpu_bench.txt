@@ -1,0 +1,863 @@
+POP 30
+FC SPHERE
+DIM 10
+Type 	 Time 	 Minimum
+CPU 	 1.6 	 1.199e-10
+Type 	 Time 	 Minimum
+CPU 	 1.6 	 5.485e-12
+Type 	 Time 	 Minimum
+CPU 	 1.6 	 2.335e-11
+Type 	 Time 	 Minimum
+CPU 	 1.6 	 4.107e-11
+Type 	 Time 	 Minimum
+CPU 	 1.6 	 1.475e-10
+Type 	 Time 	 Minimum
+CPU 	 1.6 	 1.804e-11
+Type 	 Time 	 Minimum
+CPU 	 1.6 	 1.96e-10
+Type 	 Time 	 Minimum
+CPU 	 1.6 	 5.524e-10
+Type 	 Time 	 Minimum
+CPU 	 1.6 	 1.213e-10
+Type 	 Time 	 Minimum
+CPU 	 1.6 	 1.538e-10
+
+POP 50
+FC SPHERE
+DIM 10
+Type 	 Time 	 Minimum
+CPU 	 2.8 	 2.055e-11
+Type 	 Time 	 Minimum
+CPU 	 2.8 	 1.194e-11
+Type 	 Time 	 Minimum
+CPU 	 2.8 	 1.084e-10
+Type 	 Time 	 Minimum
+CPU 	 2.8 	 7.427e-12
+Type 	 Time 	 Minimum
+CPU 	 2.8 	 1.784e-09
+Type 	 Time 	 Minimum
+CPU 	 2.8 	 1.891e-11
+Type 	 Time 	 Minimum
+CPU 	 2.8 	 1.175e-10
+Type 	 Time 	 Minimum
+CPU 	 2.8 	 6.708e-11
+Type 	 Time 	 Minimum
+CPU 	 2.8 	 1.222e-10
+Type 	 Time 	 Minimum
+CPU 	 2.8 	 4.62e-11
+
+POP 70
+FC SPHERE
+DIM 10
+Type 	 Time 	 Minimum
+CPU 	 4.1 	 7.888e-11
+Type 	 Time 	 Minimum
+CPU 	 4.1 	 4.783e-11
+Type 	 Time 	 Minimum
+CPU 	 4.1 	 6.044e-11
+Type 	 Time 	 Minimum
+CPU 	 4.2 	 6.784e-11
+Type 	 Time 	 Minimum
+CPU 	 4.1 	 5.511e-11
+Type 	 Time 	 Minimum
+CPU 	 4.1 	 1.812e-11
+Type 	 Time 	 Minimum
+CPU 	 4.1 	 7.256e-12
+Type 	 Time 	 Minimum
+CPU 	 4.1 	 1.343e-11
+Type 	 Time 	 Minimum
+CPU 	 4.1 	 3.748e-11
+Type 	 Time 	 Minimum
+CPU 	 4.1 	 1.525e-10
+
+POP 30
+FC SPHERE
+DIM 30
+Type 	 Time 	 Minimum
+CPU 	 3.1 	 0.03891
+Type 	 Time 	 Minimum
+CPU 	 3.1 	 0.0156
+Type 	 Time 	 Minimum
+CPU 	 3.1 	 0.02223
+Type 	 Time 	 Minimum
+CPU 	 3.1 	 0.01971
+Type 	 Time 	 Minimum
+CPU 	 3.1 	 0.02591
+Type 	 Time 	 Minimum
+CPU 	 3.1 	 0.04826
+Type 	 Time 	 Minimum
+CPU 	 3.1 	 0.05541
+Type 	 Time 	 Minimum
+CPU 	 3.1 	 0.02853
+Type 	 Time 	 Minimum
+CPU 	 3.1 	 0.05575
+Type 	 Time 	 Minimum
+CPU 	 3.1 	 0.1772
+
+POP 50
+FC SPHERE
+DIM 30
+Type 	 Time 	 Minimum
+CPU 	 5.4 	 0.1034
+Type 	 Time 	 Minimum
+CPU 	 5.4 	 0.1362
+Type 	 Time 	 Minimum
+CPU 	 5.4 	 0.1725
+Type 	 Time 	 Minimum
+CPU 	 5.4 	 0.06002
+Type 	 Time 	 Minimum
+CPU 	 5.4 	 0.2072
+Type 	 Time 	 Minimum
+CPU 	 5.3 	 0.2122
+Type 	 Time 	 Minimum
+CPU 	 5.4 	 0.1251
+Type 	 Time 	 Minimum
+CPU 	 5.3 	 0.1132
+Type 	 Time 	 Minimum
+CPU 	 5.3 	 0.1362
+Type 	 Time 	 Minimum
+CPU 	 5.4 	 0.05633
+
+POP 70
+FC SPHERE
+DIM 30
+Type 	 Time 	 Minimum
+CPU 	 7.8 	 0.06922
+Type 	 Time 	 Minimum
+CPU 	 7.9 	 0.2466
+Type 	 Time 	 Minimum
+CPU 	 7.9 	 0.1954
+Type 	 Time 	 Minimum
+CPU 	 7.9 	 0.5308
+Type 	 Time 	 Minimum
+CPU 	 7.8 	 0.3244
+Type 	 Time 	 Minimum
+CPU 	 7.7 	 0.2337
+Type 	 Time 	 Minimum
+CPU 	 7.7 	 0.4095
+Type 	 Time 	 Minimum
+CPU 	 7.8 	 0.1772
+Type 	 Time 	 Minimum
+CPU 	 7.8 	 0.4073
+Type 	 Time 	 Minimum
+CPU 	 7.8 	 0.06764
+
+POP 30
+FC SPHERE
+DIM 50
+Type 	 Time 	 Minimum
+CPU 	 4.6 	 2.461
+Type 	 Time 	 Minimum
+CPU 	 4.7 	 3.782
+Type 	 Time 	 Minimum
+CPU 	 4.7 	 3.631
+Type 	 Time 	 Minimum
+CPU 	 4.7 	 2.53
+Type 	 Time 	 Minimum
+CPU 	 4.7 	 3.138
+Type 	 Time 	 Minimum
+CPU 	 4.7 	 2.415
+Type 	 Time 	 Minimum
+CPU 	 4.8 	 1.53
+Type 	 Time 	 Minimum
+CPU 	 4.7 	 1.818
+Type 	 Time 	 Minimum
+CPU 	 4.7 	 3.59
+Type 	 Time 	 Minimum
+CPU 	 4.7 	 1.836
+
+POP 50
+FC SPHERE
+DIM 50
+Type 	 Time 	 Minimum
+CPU 	 8.1 	 2.042
+Type 	 Time 	 Minimum
+CPU 	 8.2 	 5.29
+Type 	 Time 	 Minimum
+CPU 	 8.1 	 2.96
+Type 	 Time 	 Minimum
+CPU 	 8.1 	 19.87
+Type 	 Time 	 Minimum
+CPU 	 8.1 	 4.975
+Type 	 Time 	 Minimum
+CPU 	 8.1 	 3.108
+Type 	 Time 	 Minimum
+CPU 	 8.1 	 6.439
+Type 	 Time 	 Minimum
+CPU 	 8.1 	 3.204
+Type 	 Time 	 Minimum
+CPU 	 8.2 	 6.228
+Type 	 Time 	 Minimum
+CPU 	 8.1 	 6.109
+
+POP 70
+FC SPHERE
+DIM 50
+Type 	 Time 	 Minimum
+CPU 	 12 	 13.48
+Type 	 Time 	 Minimum
+CPU 	 12 	 18.73
+Type 	 Time 	 Minimum
+CPU 	 12 	 10.92
+Type 	 Time 	 Minimum
+CPU 	 12 	 8.554
+Type 	 Time 	 Minimum
+CPU 	 12 	 21.01
+Type 	 Time 	 Minimum
+CPU 	 12 	 3.756
+Type 	 Time 	 Minimum
+CPU 	 12 	 12.92
+Type 	 Time 	 Minimum
+CPU 	 12 	 7.493
+Type 	 Time 	 Minimum
+CPU 	 12 	 7.631
+Type 	 Time 	 Minimum
+CPU 	 12 	 18.98
+
+POP 30
+FC ROSENBROCK
+DIM 10
+Type 	 Time 	 Minimum
+CPU 	 1.6 	 9.901
+Type 	 Time 	 Minimum
+CPU 	 1.6 	 9.901
+Type 	 Time 	 Minimum
+CPU 	 1.6 	 9.901
+Type 	 Time 	 Minimum
+CPU 	 1.6 	 9.901
+Type 	 Time 	 Minimum
+CPU 	 1.6 	 9.901
+Type 	 Time 	 Minimum
+CPU 	 1.6 	 9.901
+Type 	 Time 	 Minimum
+CPU 	 1.6 	 9.901
+Type 	 Time 	 Minimum
+CPU 	 1.6 	 9.901
+Type 	 Time 	 Minimum
+CPU 	 1.6 	 9.901
+Type 	 Time 	 Minimum
+CPU 	 1.6 	 9.901
+
+POP 50
+FC ROSENBROCK
+DIM 10
+Type 	 Time 	 Minimum
+CPU 	 2.8 	 9.901
+Type 	 Time 	 Minimum
+CPU 	 2.8 	 9.901
+Type 	 Time 	 Minimum
+CPU 	 2.8 	 9.901
+Type 	 Time 	 Minimum
+CPU 	 2.8 	 9.901
+Type 	 Time 	 Minimum
+CPU 	 2.8 	 9.901
+Type 	 Time 	 Minimum
+CPU 	 2.8 	 9.901
+Type 	 Time 	 Minimum
+CPU 	 2.8 	 9.901
+Type 	 Time 	 Minimum
+CPU 	 2.8 	 9.901
+Type 	 Time 	 Minimum
+CPU 	 2.8 	 9.901
+Type 	 Time 	 Minimum
+CPU 	 2.8 	 9.901
+
+POP 70
+FC ROSENBROCK
+DIM 10
+Type 	 Time 	 Minimum
+CPU 	 4.1 	 9.901
+Type 	 Time 	 Minimum
+CPU 	 4.1 	 9.901
+Type 	 Time 	 Minimum
+CPU 	 4.1 	 9.901
+Type 	 Time 	 Minimum
+CPU 	 4.2 	 9.901
+Type 	 Time 	 Minimum
+CPU 	 4.1 	 9.901
+Type 	 Time 	 Minimum
+CPU 	 4.1 	 9.901
+Type 	 Time 	 Minimum
+CPU 	 4.2 	 9.901
+Type 	 Time 	 Minimum
+CPU 	 4.2 	 9.901
+Type 	 Time 	 Minimum
+CPU 	 4.2 	 9.901
+Type 	 Time 	 Minimum
+CPU 	 4.1 	 9.901
+
+POP 30
+FC ROSENBROCK
+DIM 30
+Type 	 Time 	 Minimum
+CPU 	 3.2 	 33.53
+Type 	 Time 	 Minimum
+CPU 	 3.2 	 32.68
+Type 	 Time 	 Minimum
+CPU 	 3.2 	 33.09
+Type 	 Time 	 Minimum
+CPU 	 3.2 	 43.59
+Type 	 Time 	 Minimum
+CPU 	 3.2 	 35.8
+Type 	 Time 	 Minimum
+CPU 	 3.1 	 32.6
+Type 	 Time 	 Minimum
+CPU 	 3.2 	 33.49
+Type 	 Time 	 Minimum
+CPU 	 3.2 	 33.19
+Type 	 Time 	 Minimum
+CPU 	 3.1 	 33.23
+Type 	 Time 	 Minimum
+CPU 	 3.1 	 32.1
+
+POP 50
+FC ROSENBROCK
+DIM 30
+Type 	 Time 	 Minimum
+CPU 	 5.4 	 37.89
+Type 	 Time 	 Minimum
+CPU 	 5.5 	 35.39
+Type 	 Time 	 Minimum
+CPU 	 5.4 	 45.77
+Type 	 Time 	 Minimum
+CPU 	 5.5 	 34.56
+Type 	 Time 	 Minimum
+CPU 	 5.5 	 34.69
+Type 	 Time 	 Minimum
+CPU 	 5.4 	 34.67
+Type 	 Time 	 Minimum
+CPU 	 5.4 	 54.91
+Type 	 Time 	 Minimum
+CPU 	 5.5 	 37.26
+Type 	 Time 	 Minimum
+CPU 	 5.5 	 39.32
+Type 	 Time 	 Minimum
+CPU 	 5.5 	 50.85
+
+POP 70
+FC ROSENBROCK
+DIM 30
+Type 	 Time 	 Minimum
+CPU 	 7.8 	 64.78
+Type 	 Time 	 Minimum
+CPU 	 7.9 	 41.85
+Type 	 Time 	 Minimum
+CPU 	 7.9 	 47.15
+Type 	 Time 	 Minimum
+CPU 	 7.9 	 39.03
+Type 	 Time 	 Minimum
+CPU 	 7.9 	 64.11
+Type 	 Time 	 Minimum
+CPU 	 7.9 	 86.44
+Type 	 Time 	 Minimum
+CPU 	 7.9 	 65.79
+Type 	 Time 	 Minimum
+CPU 	 7.9 	 58.24
+Type 	 Time 	 Minimum
+CPU 	 7.9 	 46.7
+Type 	 Time 	 Minimum
+CPU 	 7.9 	 42.08
+
+POP 30
+FC ROSENBROCK
+DIM 50
+Type 	 Time 	 Minimum
+CPU 	 4.8 	 208.5
+Type 	 Time 	 Minimum
+CPU 	 4.8 	 247.3
+Type 	 Time 	 Minimum
+CPU 	 4.8 	 305.3
+Type 	 Time 	 Minimum
+CPU 	 4.8 	 297.9
+Type 	 Time 	 Minimum
+CPU 	 4.8 	 198.1
+Type 	 Time 	 Minimum
+CPU 	 4.8 	 428.3
+Type 	 Time 	 Minimum
+CPU 	 4.8 	 200
+Type 	 Time 	 Minimum
+CPU 	 4.8 	 361
+Type 	 Time 	 Minimum
+CPU 	 4.8 	 183.6
+Type 	 Time 	 Minimum
+CPU 	 4.8 	 357.7
+
+POP 50
+FC ROSENBROCK
+DIM 50
+Type 	 Time 	 Minimum
+CPU 	 8.2 	 664.1
+Type 	 Time 	 Minimum
+CPU 	 8.2 	 367.2
+Type 	 Time 	 Minimum
+CPU 	 8.3 	 702
+Type 	 Time 	 Minimum
+CPU 	 8.2 	 474.4
+Type 	 Time 	 Minimum
+CPU 	 8.2 	 808.3
+Type 	 Time 	 Minimum
+CPU 	 8.2 	 457.1
+Type 	 Time 	 Minimum
+CPU 	 8.2 	 587.7
+Type 	 Time 	 Minimum
+CPU 	 8.2 	 269.5
+Type 	 Time 	 Minimum
+CPU 	 8.2 	 303.5
+Type 	 Time 	 Minimum
+CPU 	 8.2 	 406.5
+
+POP 70
+FC ROSENBROCK
+DIM 50
+Type 	 Time 	 Minimum
+CPU 	 12 	 1919
+Type 	 Time 	 Minimum
+CPU 	 12 	 1154
+Type 	 Time 	 Minimum
+CPU 	 12 	 896.7
+Type 	 Time 	 Minimum
+CPU 	 12 	 375.6
+Type 	 Time 	 Minimum
+CPU 	 12 	 995.5
+Type 	 Time 	 Minimum
+CPU 	 12 	 1599
+Type 	 Time 	 Minimum
+CPU 	 12 	 957.5
+Type 	 Time 	 Minimum
+CPU 	 12 	 902.3
+Type 	 Time 	 Minimum
+CPU 	 12 	 2055
+Type 	 Time 	 Minimum
+CPU 	 12 	 1004
+
+POP 30
+FC ACKLEY
+DIM 10
+Type 	 Time 	 Minimum
+CPU 	 1.7 	 10.72
+Type 	 Time 	 Minimum
+CPU 	 1.7 	 10.7
+Type 	 Time 	 Minimum
+CPU 	 1.7 	 10.77
+Type 	 Time 	 Minimum
+CPU 	 1.7 	 10.84
+Type 	 Time 	 Minimum
+CPU 	 1.7 	 10.76
+Type 	 Time 	 Minimum
+CPU 	 1.7 	 10.72
+Type 	 Time 	 Minimum
+CPU 	 1.7 	 10.7
+Type 	 Time 	 Minimum
+CPU 	 1.7 	 10.71
+Type 	 Time 	 Minimum
+CPU 	 1.7 	 10.73
+Type 	 Time 	 Minimum
+CPU 	 1.7 	 10.72
+
+POP 50
+FC ACKLEY
+DIM 10
+Type 	 Time 	 Minimum
+CPU 	 2.9 	 10.86
+Type 	 Time 	 Minimum
+CPU 	 2.9 	 10.79
+Type 	 Time 	 Minimum
+CPU 	 2.9 	 11.42
+Type 	 Time 	 Minimum
+CPU 	 2.9 	 10.87
+Type 	 Time 	 Minimum
+CPU 	 2.9 	 10.75
+Type 	 Time 	 Minimum
+CPU 	 2.9 	 10.99
+Type 	 Time 	 Minimum
+CPU 	 2.9 	 11.47
+Type 	 Time 	 Minimum
+CPU 	 2.9 	 10.88
+Type 	 Time 	 Minimum
+CPU 	 2.9 	 10.85
+Type 	 Time 	 Minimum
+CPU 	 2.9 	 10.8
+
+POP 70
+FC ACKLEY
+DIM 10
+Type 	 Time 	 Minimum
+CPU 	 4.2 	 10.79
+Type 	 Time 	 Minimum
+CPU 	 4.2 	 20.08
+Type 	 Time 	 Minimum
+CPU 	 4.2 	 10.88
+Type 	 Time 	 Minimum
+CPU 	 4.2 	 11.35
+Type 	 Time 	 Minimum
+CPU 	 4.2 	 10.9
+Type 	 Time 	 Minimum
+CPU 	 4.2 	 10.81
+Type 	 Time 	 Minimum
+CPU 	 4.2 	 11.07
+Type 	 Time 	 Minimum
+CPU 	 4.2 	 10.77
+Type 	 Time 	 Minimum
+CPU 	 4.2 	 10.76
+Type 	 Time 	 Minimum
+CPU 	 4.2 	 10.98
+
+POP 30
+FC ACKLEY
+DIM 30
+Type 	 Time 	 Minimum
+CPU 	 3.2 	 195.4
+Type 	 Time 	 Minimum
+CPU 	 3.3 	 208.4
+Type 	 Time 	 Minimum
+CPU 	 3.3 	 180.5
+Type 	 Time 	 Minimum
+CPU 	 3.3 	 197.5
+Type 	 Time 	 Minimum
+CPU 	 3.3 	 310.4
+Type 	 Time 	 Minimum
+CPU 	 3.2 	 331.2
+Type 	 Time 	 Minimum
+CPU 	 3.3 	 167.4
+Type 	 Time 	 Minimum
+CPU 	 3.3 	 184.4
+Type 	 Time 	 Minimum
+CPU 	 3.3 	 222.9
+Type 	 Time 	 Minimum
+CPU 	 3.2 	 132.5
+
+POP 50
+FC ACKLEY
+DIM 30
+Type 	 Time 	 Minimum
+CPU 	 5.7 	 292.2
+Type 	 Time 	 Minimum
+CPU 	 5.7 	 196.9
+Type 	 Time 	 Minimum
+CPU 	 5.7 	 265.9
+Type 	 Time 	 Minimum
+CPU 	 5.7 	 265.1
+Type 	 Time 	 Minimum
+CPU 	 5.6 	 290.7
+Type 	 Time 	 Minimum
+CPU 	 5.7 	 190.8
+Type 	 Time 	 Minimum
+CPU 	 5.6 	 219.9
+Type 	 Time 	 Minimum
+CPU 	 5.7 	 246.9
+Type 	 Time 	 Minimum
+CPU 	 5.6 	 119
+Type 	 Time 	 Minimum
+CPU 	 5.6 	 124.9
+
+POP 70
+FC ACKLEY
+DIM 30
+Type 	 Time 	 Minimum
+CPU 	 8.1 	 281.3
+Type 	 Time 	 Minimum
+CPU 	 8.1 	 230
+Type 	 Time 	 Minimum
+CPU 	 8.2 	 226.2
+Type 	 Time 	 Minimum
+CPU 	 8.2 	 219.7
+Type 	 Time 	 Minimum
+CPU 	 8.2 	 226.8
+Type 	 Time 	 Minimum
+CPU 	 8.2 	 258.4
+Type 	 Time 	 Minimum
+CPU 	 8.2 	 138.2
+Type 	 Time 	 Minimum
+CPU 	 8.2 	 261.7
+Type 	 Time 	 Minimum
+CPU 	 8.2 	 230.3
+Type 	 Time 	 Minimum
+CPU 	 8.1 	 229.2
+
+POP 30
+FC ACKLEY
+DIM 50
+Type 	 Time 	 Minimum
+CPU 	 4.9 	 472.9
+Type 	 Time 	 Minimum
+CPU 	 4.9 	 485.1
+Type 	 Time 	 Minimum
+CPU 	 4.9 	 496
+Type 	 Time 	 Minimum
+CPU 	 5 	 384.2
+Type 	 Time 	 Minimum
+CPU 	 5 	 482.7
+Type 	 Time 	 Minimum
+CPU 	 5 	 445.3
+Type 	 Time 	 Minimum
+CPU 	 5 	 324.8
+Type 	 Time 	 Minimum
+CPU 	 5 	 344.4
+Type 	 Time 	 Minimum
+CPU 	 5 	 470.2
+Type 	 Time 	 Minimum
+CPU 	 5 	 559.5
+
+POP 50
+FC ACKLEY
+DIM 50
+Type 	 Time 	 Minimum
+CPU 	 8.5 	 502.6
+Type 	 Time 	 Minimum
+CPU 	 8.5 	 490.6
+Type 	 Time 	 Minimum
+CPU 	 8.5 	 408
+Type 	 Time 	 Minimum
+CPU 	 8.5 	 512.1
+Type 	 Time 	 Minimum
+CPU 	 8.5 	 502.8
+Type 	 Time 	 Minimum
+CPU 	 8.5 	 395.4
+Type 	 Time 	 Minimum
+CPU 	 8.5 	 540.3
+Type 	 Time 	 Minimum
+CPU 	 8.5 	 555.2
+Type 	 Time 	 Minimum
+CPU 	 8.6 	 586.3
+Type 	 Time 	 Minimum
+CPU 	 8.6 	 491.4
+
+POP 70
+FC ACKLEY
+DIM 50
+Type 	 Time 	 Minimum
+CPU 	 12 	 598.4
+Type 	 Time 	 Minimum
+CPU 	 12 	 515.3
+Type 	 Time 	 Minimum
+CPU 	 12 	 483.2
+Type 	 Time 	 Minimum
+CPU 	 12 	 579.2
+Type 	 Time 	 Minimum
+CPU 	 12 	 469.9
+Type 	 Time 	 Minimum
+CPU 	 12 	 498
+Type 	 Time 	 Minimum
+CPU 	 12 	 498.5
+Type 	 Time 	 Minimum
+CPU 	 12 	 450.6
+Type 	 Time 	 Minimum
+CPU 	 12 	 480.9
+Type 	 Time 	 Minimum
+CPU 	 12 	 451.2
+
+POP 30
+FC RASTRIGIN
+DIM 10
+Type 	 Time 	 Minimum
+CPU 	 1.6 	 37.08
+Type 	 Time 	 Minimum
+CPU 	 1.6 	 33.76
+Type 	 Time 	 Minimum
+CPU 	 1.6 	 42.01
+Type 	 Time 	 Minimum
+CPU 	 1.6 	 34.92
+Type 	 Time 	 Minimum
+CPU 	 1.6 	 45.66
+Type 	 Time 	 Minimum
+CPU 	 1.6 	 34.79
+Type 	 Time 	 Minimum
+CPU 	 1.6 	 21.29
+Type 	 Time 	 Minimum
+CPU 	 1.6 	 24.37
+Type 	 Time 	 Minimum
+CPU 	 1.6 	 44.21
+Type 	 Time 	 Minimum
+CPU 	 1.6 	 28.12
+
+POP 50
+FC RASTRIGIN
+DIM 10
+Type 	 Time 	 Minimum
+CPU 	 2.8 	 31.17
+Type 	 Time 	 Minimum
+CPU 	 2.8 	 36.03
+Type 	 Time 	 Minimum
+CPU 	 2.9 	 24.02
+Type 	 Time 	 Minimum
+CPU 	 2.8 	 30.86
+Type 	 Time 	 Minimum
+CPU 	 2.8 	 29.91
+Type 	 Time 	 Minimum
+CPU 	 2.8 	 28.99
+Type 	 Time 	 Minimum
+CPU 	 2.8 	 32.26
+Type 	 Time 	 Minimum
+CPU 	 2.8 	 43.99
+Type 	 Time 	 Minimum
+CPU 	 2.8 	 15.4
+Type 	 Time 	 Minimum
+CPU 	 2.8 	 29.95
+
+POP 70
+FC RASTRIGIN
+DIM 10
+Type 	 Time 	 Minimum
+CPU 	 4.2 	 22.45
+Type 	 Time 	 Minimum
+CPU 	 4.1 	 34.93
+Type 	 Time 	 Minimum
+CPU 	 4.1 	 53.23
+Type 	 Time 	 Minimum
+CPU 	 4.1 	 28.17
+Type 	 Time 	 Minimum
+CPU 	 4.1 	 24.5
+Type 	 Time 	 Minimum
+CPU 	 4.1 	 46.18
+Type 	 Time 	 Minimum
+CPU 	 4.2 	 22.49
+Type 	 Time 	 Minimum
+CPU 	 4.2 	 34.76
+Type 	 Time 	 Minimum
+CPU 	 4.2 	 26.1
+Type 	 Time 	 Minimum
+CPU 	 4.1 	 24.71
+
+POP 30
+FC RASTRIGIN
+DIM 30
+Type 	 Time 	 Minimum
+CPU 	 3.1 	 264.1
+Type 	 Time 	 Minimum
+CPU 	 3.1 	 251.6
+Type 	 Time 	 Minimum
+CPU 	 3.1 	 217.8
+Type 	 Time 	 Minimum
+CPU 	 3.1 	 225
+Type 	 Time 	 Minimum
+CPU 	 3.1 	 252.8
+Type 	 Time 	 Minimum
+CPU 	 3.2 	 303.1
+Type 	 Time 	 Minimum
+CPU 	 3.2 	 168.4
+Type 	 Time 	 Minimum
+CPU 	 3.1 	 237.2
+Type 	 Time 	 Minimum
+CPU 	 3.2 	 230
+Type 	 Time 	 Minimum
+CPU 	 3.1 	 211.5
+
+POP 50
+FC RASTRIGIN
+DIM 30
+Type 	 Time 	 Minimum
+CPU 	 5.4 	 234.4
+Type 	 Time 	 Minimum
+CPU 	 5.4 	 231.9
+Type 	 Time 	 Minimum
+CPU 	 5.5 	 233.5
+Type 	 Time 	 Minimum
+CPU 	 5.4 	 236.1
+Type 	 Time 	 Minimum
+CPU 	 5.4 	 271.4
+Type 	 Time 	 Minimum
+CPU 	 5.4 	 221.4
+Type 	 Time 	 Minimum
+CPU 	 5.5 	 243
+Type 	 Time 	 Minimum
+CPU 	 5.4 	 256.7
+Type 	 Time 	 Minimum
+CPU 	 5.4 	 233.6
+Type 	 Time 	 Minimum
+CPU 	 5.4 	 260.7
+
+POP 70
+FC RASTRIGIN
+DIM 30
+Type 	 Time 	 Minimum
+CPU 	 7.9 	 163.4
+Type 	 Time 	 Minimum
+CPU 	 7.9 	 251.9
+Type 	 Time 	 Minimum
+CPU 	 7.9 	 249.1
+Type 	 Time 	 Minimum
+CPU 	 7.9 	 232
+Type 	 Time 	 Minimum
+CPU 	 7.9 	 207.8
+Type 	 Time 	 Minimum
+CPU 	 7.9 	 248.9
+Type 	 Time 	 Minimum
+CPU 	 7.9 	 242.5
+Type 	 Time 	 Minimum
+CPU 	 7.9 	 183.8
+Type 	 Time 	 Minimum
+CPU 	 7.9 	 289
+Type 	 Time 	 Minimum
+CPU 	 7.9 	 249.6
+
+POP 30
+FC RASTRIGIN
+DIM 50
+Type 	 Time 	 Minimum
+CPU 	 4.8 	 519.5
+Type 	 Time 	 Minimum
+CPU 	 4.8 	 547.5
+Type 	 Time 	 Minimum
+CPU 	 4.8 	 529.9
+Type 	 Time 	 Minimum
+CPU 	 4.8 	 531.4
+Type 	 Time 	 Minimum
+CPU 	 4.8 	 511
+Type 	 Time 	 Minimum
+CPU 	 4.8 	 600.7
+Type 	 Time 	 Minimum
+CPU 	 4.8 	 577.1
+Type 	 Time 	 Minimum
+CPU 	 4.8 	 469.4
+Type 	 Time 	 Minimum
+CPU 	 4.8 	 534.1
+Type 	 Time 	 Minimum
+CPU 	 4.8 	 479.2
+
+POP 50
+FC RASTRIGIN
+DIM 50
+Type 	 Time 	 Minimum
+CPU 	 8.3 	 533.2
+Type 	 Time 	 Minimum
+CPU 	 8.2 	 537.3
+Type 	 Time 	 Minimum
+CPU 	 8.2 	 522.7
+Type 	 Time 	 Minimum
+CPU 	 8.2 	 572.5
+Type 	 Time 	 Minimum
+CPU 	 8.2 	 402.5
+Type 	 Time 	 Minimum
+CPU 	 8.1 	 431.4
+Type 	 Time 	 Minimum
+CPU 	 8.1 	 506
+Type 	 Time 	 Minimum
+CPU 	 8.1 	 636.2
+Type 	 Time 	 Minimum
+CPU 	 8.2 	 507
+Type 	 Time 	 Minimum
+CPU 	 8.2 	 579.5
+
+POP 70
+FC RASTRIGIN
+DIM 50
+Type 	 Time 	 Minimum
+CPU 	 12 	 596.7
+Type 	 Time 	 Minimum
+CPU 	 12 	 559.7
+Type 	 Time 	 Minimum
+CPU 	 12 	 512.6
+Type 	 Time 	 Minimum
+CPU 	 12 	 591.2
+Type 	 Time 	 Minimum
+CPU 	 12 	 617.7
+Type 	 Time 	 Minimum
+CPU 	 12 	 565.4
+Type 	 Time 	 Minimum
+CPU 	 12 	 500
+Type 	 Time 	 Minimum
+CPU 	 12 	 666.2
+Type 	 Time 	 Minimum
+CPU 	 12 	 479.1
+Type 	 Time 	 Minimum
+CPU 	 12 	 502.7

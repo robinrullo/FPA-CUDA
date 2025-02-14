@@ -1,0 +1,864 @@
+POP 30
+FC SPHERE
+DIM 10
+Type 	 Time 	 Minimum
+GPU 	 0.37 	 1.109e-82
+Type 	 Time 	 Minimum
+GPU 	 0.29 	 4.119e-85
+Type 	 Time 	 Minimum
+GPU 	 0.29 	 1.823e-84
+Type 	 Time 	 Minimum
+GPU 	 0.29 	 3.732e-84
+Type 	 Time 	 Minimum
+GPU 	 0.29 	 3.651e-87
+Type 	 Time 	 Minimum
+GPU 	 0.29 	 6.416e-84
+Type 	 Time 	 Minimum
+GPU 	 0.29 	 6.273e-85
+Type 	 Time 	 Minimum
+GPU 	 0.29 	 5.093e-87
+Type 	 Time 	 Minimum
+GPU 	 0.28 	 6.696e-84
+Type 	 Time 	 Minimum
+GPU 	 0.29 	 7.013e-83
+
+POP 50
+FC SPHERE
+DIM 10
+Type 	 Time 	 Minimum
+GPU 	 0.38 	 6.013e-90
+Type 	 Time 	 Minimum
+GPU 	 0.31 	 4.08e-90
+Type 	 Time 	 Minimum
+GPU 	 0.3 	 1.695e-89
+Type 	 Time 	 Minimum
+GPU 	 0.3 	 1.46e-90
+Type 	 Time 	 Minimum
+GPU 	 0.3 	 1.213e-89
+Type 	 Time 	 Minimum
+GPU 	 0.3 	 4.074e-89
+Type 	 Time 	 Minimum
+GPU 	 0.3 	 4.509e-89
+Type 	 Time 	 Minimum
+GPU 	 0.3 	 5.084e-89
+Type 	 Time 	 Minimum
+GPU 	 0.3 	 6.161e-90
+Type 	 Time 	 Minimum
+GPU 	 0.3 	 1.736e-90
+
+POP 70
+FC SPHERE
+DIM 10
+Type 	 Time 	 Minimum
+GPU 	 0.36 	 1.731e-92
+Type 	 Time 	 Minimum
+GPU 	 0.31 	 1.743e-92
+Type 	 Time 	 Minimum
+GPU 	 0.31 	 1.352e-91
+Type 	 Time 	 Minimum
+GPU 	 0.31 	 7.437e-94
+Type 	 Time 	 Minimum
+GPU 	 0.31 	 9.286e-93
+Type 	 Time 	 Minimum
+GPU 	 0.3 	 3.352e-92
+Type 	 Time 	 Minimum
+GPU 	 0.31 	 6.334e-93
+Type 	 Time 	 Minimum
+GPU 	 0.31 	 5.722e-92
+Type 	 Time 	 Minimum
+GPU 	 0.31 	 1.014e-91
+Type 	 Time 	 Minimum
+GPU 	 0.31 	 5.088e-93
+
+POP 30
+FC ROSENBROCK
+DIM 10
+Type 	 Time 	 Minimum
+GPU 	 1.7 	 5.036
+Type 	 Time 	 Minimum
+GPU 	 1.6 	 6.491
+Type 	 Time 	 Minimum
+GPU 	 1.6 	 3.923
+Type 	 Time 	 Minimum
+GPU 	 1.6 	 62.09
+Type 	 Time 	 Minimum
+GPU 	 1.6 	 16.28
+Type 	 Time 	 Minimum
+GPU 	 1.6 	 0.3949
+Type 	 Time 	 Minimum
+GPU 	 1.6 	 3.654
+Type 	 Time 	 Minimum
+GPU 	 1.6 	 2.07
+Type 	 Time 	 Minimum
+GPU 	 1.6 	 6.412
+Type 	 Time 	 Minimum
+GPU 	 1.6 	 2.954
+
+POP 50
+FC ROSENBROCK
+DIM 10
+Type 	 Time 	 Minimum
+GPU 	 1.9 	 4.357
+Type 	 Time 	 Minimum
+GPU 	 1.7 	 19.17
+Type 	 Time 	 Minimum
+GPU 	 1.7 	 8.114
+Type 	 Time 	 Minimum
+GPU 	 1.7 	 5.624
+Type 	 Time 	 Minimum
+GPU 	 1.7 	 2.638
+Type 	 Time 	 Minimum
+GPU 	 1.7 	 0.5954
+Type 	 Time 	 Minimum
+GPU 	 1.7 	 8.219
+Type 	 Time 	 Minimum
+GPU 	 1.7 	 5.97
+Type 	 Time 	 Minimum
+GPU 	 1.7 	 1.107
+Type 	 Time 	 Minimum
+GPU 	 1.7 	 4.524
+
+POP 70
+FC ROSENBROCK
+DIM 10
+Type 	 Time 	 Minimum
+GPU 	 2 	 45.77
+Type 	 Time 	 Minimum
+GPU 	 1.9 	 3.532
+Type 	 Time 	 Minimum
+GPU 	 1.9 	 20.36
+Type 	 Time 	 Minimum
+GPU 	 1.9 	 7.942
+Type 	 Time 	 Minimum
+GPU 	 1.9 	 88.7
+Type 	 Time 	 Minimum
+GPU 	 1.9 	 7.239
+Type 	 Time 	 Minimum
+GPU 	 1.9 	 7.901
+Type 	 Time 	 Minimum
+GPU 	 1.9 	 8.04
+Type 	 Time 	 Minimum
+GPU 	 1.9 	 173.4
+Type 	 Time 	 Minimum
+GPU 	 1.9 	 4.385
+
+POP 30
+FC ACKLEY
+DIM 10
+Type 	 Time 	 Minimum
+GPU 	 0.58 	 0.02672
+Type 	 Time 	 Minimum
+GPU 	 0.46 	 0.01724
+Type 	 Time 	 Minimum
+GPU 	 0.46 	 0.03817
+Type 	 Time 	 Minimum
+GPU 	 0.46 	 0.05022
+Type 	 Time 	 Minimum
+GPU 	 0.46 	 0.04774
+Type 	 Time 	 Minimum
+GPU 	 0.46 	 0.02973
+Type 	 Time 	 Minimum
+GPU 	 0.46 	 0.02928
+Type 	 Time 	 Minimum
+GPU 	 0.46 	 0.033
+Type 	 Time 	 Minimum
+GPU 	 0.46 	 0.02537
+Type 	 Time 	 Minimum
+GPU 	 0.46 	 0.02732
+
+POP 50
+FC ACKLEY
+DIM 10
+Type 	 Time 	 Minimum
+GPU 	 0.56 	 0.09914
+Type 	 Time 	 Minimum
+GPU 	 0.5 	 0.1244
+Type 	 Time 	 Minimum
+GPU 	 0.5 	 0.08901
+Type 	 Time 	 Minimum
+GPU 	 0.5 	 0.04228
+Type 	 Time 	 Minimum
+GPU 	 0.5 	 0.07525
+Type 	 Time 	 Minimum
+GPU 	 0.5 	 0.06208
+Type 	 Time 	 Minimum
+GPU 	 0.5 	 0.05002
+Type 	 Time 	 Minimum
+GPU 	 0.5 	 0.08649
+Type 	 Time 	 Minimum
+GPU 	 0.5 	 0.07751
+Type 	 Time 	 Minimum
+GPU 	 0.5 	 0.1029
+
+POP 70
+FC ACKLEY
+DIM 10
+Type 	 Time 	 Minimum
+GPU 	 0.65 	 3.91
+Type 	 Time 	 Minimum
+GPU 	 0.53 	 0.04866
+Type 	 Time 	 Minimum
+GPU 	 0.54 	 1.988
+Type 	 Time 	 Minimum
+GPU 	 0.54 	 0.02551
+Type 	 Time 	 Minimum
+GPU 	 0.55 	 3.619
+Type 	 Time 	 Minimum
+GPU 	 0.54 	 0.08178
+Type 	 Time 	 Minimum
+GPU 	 0.54 	 2.824
+Type 	 Time 	 Minimum
+GPU 	 0.54 	 0.0992
+Type 	 Time 	 Minimum
+GPU 	 0.54 	 3.669
+Type 	 Time 	 Minimum
+GPU 	 0.53 	 0.09907
+
+POP 30
+FC RASTRIGIN
+DIM 10
+Type 	 Time 	 Minimum
+GPU 	 0.56 	 0.1033
+Type 	 Time 	 Minimum
+GPU 	 0.44 	 0.4826
+Type 	 Time 	 Minimum
+GPU 	 0.44 	 1.474
+Type 	 Time 	 Minimum
+GPU 	 0.44 	 1.429
+Type 	 Time 	 Minimum
+GPU 	 0.44 	 0.1693
+Type 	 Time 	 Minimum
+GPU 	 0.44 	 0.315
+Type 	 Time 	 Minimum
+GPU 	 0.44 	 0.4487
+Type 	 Time 	 Minimum
+GPU 	 0.44 	 2.132
+Type 	 Time 	 Minimum
+GPU 	 0.44 	 1.067
+Type 	 Time 	 Minimum
+GPU 	 0.44 	 0.1794
+
+POP 50
+FC RASTRIGIN
+DIM 10
+Type 	 Time 	 Minimum
+GPU 	 0.54 	 31.22
+Type 	 Time 	 Minimum
+GPU 	 0.48 	 12.27
+Type 	 Time 	 Minimum
+GPU 	 0.48 	 14.79
+Type 	 Time 	 Minimum
+GPU 	 0.48 	 12.98
+Type 	 Time 	 Minimum
+GPU 	 0.48 	 18.89
+Type 	 Time 	 Minimum
+GPU 	 0.48 	 19.16
+Type 	 Time 	 Minimum
+GPU 	 0.48 	 21.06
+Type 	 Time 	 Minimum
+GPU 	 0.48 	 20.51
+Type 	 Time 	 Minimum
+GPU 	 0.48 	 15.56
+Type 	 Time 	 Minimum
+GPU 	 0.48 	 13.34
+
+POP 70
+FC RASTRIGIN
+DIM 10
+Type 	 Time 	 Minimum
+GPU 	 0.63 	 37.62
+Type 	 Time 	 Minimum
+GPU 	 0.52 	 8.195
+Type 	 Time 	 Minimum
+GPU 	 0.52 	 17.35
+Type 	 Time 	 Minimum
+GPU 	 0.51 	 1.086
+Type 	 Time 	 Minimum
+GPU 	 0.52 	 20.76
+Type 	 Time 	 Minimum
+GPU 	 0.51 	 4.47
+Type 	 Time 	 Minimum
+GPU 	 0.52 	 26.85
+Type 	 Time 	 Minimum
+GPU 	 0.52 	 8.485
+Type 	 Time 	 Minimum
+GPU 	 0.52 	 43.6
+Type 	 Time 	 Minimum
+GPU 	 0.52 	 7.799
+
+POP 30
+FC SPHERE
+DIM 30
+Type 	 Time 	 Minimum
+GPU 	 0.46 	 6.218e-08
+Type 	 Time 	 Minimum
+GPU 	 0.35 	 6.218e-08
+Type 	 Time 	 Minimum
+GPU 	 0.35 	 1.137e-07
+Type 	 Time 	 Minimum
+GPU 	 0.35 	 1.453e-07
+Type 	 Time 	 Minimum
+GPU 	 0.35 	 1.121e-07
+Type 	 Time 	 Minimum
+GPU 	 0.35 	 1.121e-07
+Type 	 Time 	 Minimum
+GPU 	 0.35 	 1.121e-07
+Type 	 Time 	 Minimum
+GPU 	 0.35 	 2.666e-08
+Type 	 Time 	 Minimum
+GPU 	 0.35 	 2.666e-08
+Type 	 Time 	 Minimum
+GPU 	 0.35 	 2.666e-08
+
+POP 50
+FC SPHERE
+DIM 30
+Type 	 Time 	 Minimum
+GPU 	 0.44 	 5.827e-09
+Type 	 Time 	 Minimum
+GPU 	 0.38 	 4.727e-09
+Type 	 Time 	 Minimum
+GPU 	 0.38 	 1.595e-08
+Type 	 Time 	 Minimum
+GPU 	 0.38 	 5.919e-09
+Type 	 Time 	 Minimum
+GPU 	 0.38 	 7.988e-09
+Type 	 Time 	 Minimum
+GPU 	 0.38 	 3.342e-09
+Type 	 Time 	 Minimum
+GPU 	 0.39 	 1.383e-08
+Type 	 Time 	 Minimum
+GPU 	 0.38 	 3.368e-09
+Type 	 Time 	 Minimum
+GPU 	 0.39 	 1.29e-08
+Type 	 Time 	 Minimum
+GPU 	 0.38 	 5.007e-09
+
+POP 70
+FC SPHERE
+DIM 30
+Type 	 Time 	 Minimum
+GPU 	 0.55 	 5.159e-09
+Type 	 Time 	 Minimum
+GPU 	 0.44 	 2.615e-09
+Type 	 Time 	 Minimum
+GPU 	 0.43 	 2.498e-09
+Type 	 Time 	 Minimum
+GPU 	 0.43 	 2.456e-09
+Type 	 Time 	 Minimum
+GPU 	 0.43 	 3.361e-09
+Type 	 Time 	 Minimum
+GPU 	 0.44 	 3.361e-09
+Type 	 Time 	 Minimum
+GPU 	 0.43 	 3.361e-09
+Type 	 Time 	 Minimum
+GPU 	 0.43 	 7.801e-09
+Type 	 Time 	 Minimum
+GPU 	 0.43 	 5.858e-09
+Type 	 Time 	 Minimum
+GPU 	 0.43 	 5.085e-09
+
+POP 30
+FC ROSENBROCK
+DIM 30
+Type 	 Time 	 Minimum
+GPU 	 5.4 	 354.8
+Type 	 Time 	 Minimum
+GPU 	 5.3 	 289
+Type 	 Time 	 Minimum
+GPU 	 5.3 	 368.4
+Type 	 Time 	 Minimum
+GPU 	 5.3 	 505.6
+Type 	 Time 	 Minimum
+GPU 	 5.3 	 1440
+Type 	 Time 	 Minimum
+GPU 	 5.3 	 493.6
+Type 	 Time 	 Minimum
+GPU 	 5.3 	 470.5
+Type 	 Time 	 Minimum
+GPU 	 5.3 	 1930
+Type 	 Time 	 Minimum
+GPU 	 5.3 	 761
+Type 	 Time 	 Minimum
+GPU 	 5.3 	 373.8
+
+POP 50
+FC ROSENBROCK
+DIM 30
+Type 	 Time 	 Minimum
+GPU 	 7.1 	 1.381e+05
+Type 	 Time 	 Minimum
+GPU 	 6.9 	 5.937e+04
+Type 	 Time 	 Minimum
+GPU 	 6.9 	 1.165e+05
+Type 	 Time 	 Minimum
+GPU 	 6.9 	 7.228e+04
+Type 	 Time 	 Minimum
+GPU 	 6.9 	 2.05e+05
+Type 	 Time 	 Minimum
+GPU 	 6.9 	 7.83e+04
+Type 	 Time 	 Minimum
+GPU 	 6.9 	 2.039e+05
+Type 	 Time 	 Minimum
+GPU 	 6.9 	 5.093e+04
+Type 	 Time 	 Minimum
+GPU 	 6.9 	 1.704e+05
+Type 	 Time 	 Minimum
+GPU 	 6.9 	 2.696e+04
+
+
+POP 70
+FC ROSENBROCK
+DIM 30
+Type 	 Time 	 Minimum
+GPU 	 10 	 1.471e+05
+Type 	 Time 	 Minimum
+GPU 	 9.9 	 2.641e+04
+Type 	 Time 	 Minimum
+GPU 	 9.9 	 1.264e+05
+Type 	 Time 	 Minimum
+GPU 	 9.9 	 7259
+Type 	 Time 	 Minimum
+GPU 	 9.9 	 1.157e+05
+Type 	 Time 	 Minimum
+GPU 	 9.9 	 6.419e+04
+Type 	 Time 	 Minimum
+GPU 	 9.9 	 1.459e+05
+Type 	 Time 	 Minimum
+GPU 	 9.9 	 1.688e+04
+Type 	 Time 	 Minimum
+GPU 	 9.9 	 1.623e+05
+Type 	 Time 	 Minimum
+GPU 	 9.9 	 3.845e+04
+
+POP 30
+FC ACKLEY
+DIM 30
+Type 	 Time 	 Minimum
+GPU 	 0.93 	 3.538
+Type 	 Time 	 Minimum
+GPU 	 0.87 	 3.525
+Type 	 Time 	 Minimum
+GPU 	 0.87 	 2.929
+Type 	 Time 	 Minimum
+GPU 	 0.87 	 3.529
+Type 	 Time 	 Minimum
+GPU 	 0.87 	 3.554
+Type 	 Time 	 Minimum
+GPU 	 0.87 	 3.827
+Type 	 Time 	 Minimum
+GPU 	 0.87 	 2.422
+Type 	 Time 	 Minimum
+GPU 	 0.87 	 2.988
+Type 	 Time 	 Minimum
+GPU 	 0.87 	 3.098
+Type 	 Time 	 Minimum
+GPU 	 0.87 	 4.023
+
+POP 50
+FC ACKLEY
+DIM 30
+Type 	 Time 	 Minimum
+GPU 	 1.2 	 4.576
+Type 	 Time 	 Minimum
+GPU 	 1.1 	 4.167
+Type 	 Time 	 Minimum
+GPU 	 1.1 	 5.812
+Type 	 Time 	 Minimum
+GPU 	 1.1 	 6.084
+Type 	 Time 	 Minimum
+GPU 	 1.1 	 4.171
+Type 	 Time 	 Minimum
+GPU 	 1.1 	 3.389
+Type 	 Time 	 Minimum
+GPU 	 1.1 	 5.365
+Type 	 Time 	 Minimum
+GPU 	 1.1 	 6.363
+Type 	 Time 	 Minimum
+GPU 	 1.1 	 5.096
+Type 	 Time 	 Minimum
+GPU 	 1.1 	 3.059
+
+POP 70
+FC ACKLEY
+DIM 30
+Type 	 Time 	 Minimum
+GPU 	 1.6 	 6.988
+Type 	 Time 	 Minimum
+GPU 	 1.4 	 4.692
+Type 	 Time 	 Minimum
+GPU 	 1.4 	 5.5
+Type 	 Time 	 Minimum
+GPU 	 1.4 	 4.187
+Type 	 Time 	 Minimum
+GPU 	 1.5 	 7.747
+Type 	 Time 	 Minimum
+GPU 	 1.5 	 5.059
+Type 	 Time 	 Minimum
+GPU 	 1.5 	 4.966
+Type 	 Time 	 Minimum
+GPU 	 1.5 	 4.769
+Type 	 Time 	 Minimum
+GPU 	 1.5 	 7.668
+Type 	 Time 	 Minimum
+GPU 	 1.5 	 5.311
+
+POP 30
+FC RASTRIGIN
+DIM 30
+Type 	 Time 	 Minimum
+GPU 	 0.94 	 141.5
+Type 	 Time 	 Minimum
+GPU 	 0.88 	 245.8
+Type 	 Time 	 Minimum
+GPU 	 0.88 	 236.4
+Type 	 Time 	 Minimum
+GPU 	 0.88 	 211.2
+Type 	 Time 	 Minimum
+GPU 	 0.88 	 191.8
+Type 	 Time 	 Minimum
+GPU 	 0.88 	 163.2
+Type 	 Time 	 Minimum
+GPU 	 0.88 	 173.1
+Type 	 Time 	 Minimum
+GPU 	 0.88 	 187.3
+Type 	 Time 	 Minimum
+GPU 	 0.88 	 294.5
+Type 	 Time 	 Minimum
+GPU 	 0.88 	 171.2
+
+POP 50
+FC RASTRIGIN
+DIM 30
+Type 	 Time 	 Minimum
+GPU 	 1.2 	 294.1
+Type 	 Time 	 Minimum
+GPU 	 1.1 	 178.9
+Type 	 Time 	 Minimum
+GPU 	 1.1 	 251.7
+Type 	 Time 	 Minimum
+GPU 	 1.1 	 335.2
+Type 	 Time 	 Minimum
+GPU 	 1.1 	 202.2
+Type 	 Time 	 Minimum
+GPU 	 1.1 	 155.4
+Type 	 Time 	 Minimum
+GPU 	 1.1 	 328.7
+Type 	 Time 	 Minimum
+GPU 	 1.1 	 314.2
+Type 	 Time 	 Minimum
+GPU 	 1.1 	 299.9
+Type 	 Time 	 Minimum
+GPU 	 1.1 	 174.6
+
+POP 70
+FC RASTRIGIN
+DIM 30
+Type 	 Time 	 Minimum
+GPU 	 1.6 	 388.5
+Type 	 Time 	 Minimum
+GPU 	 1.4 	 244.7
+Type 	 Time 	 Minimum
+GPU 	 1.4 	 291.5
+Type 	 Time 	 Minimum
+GPU 	 1.5 	 202.2
+Type 	 Time 	 Minimum
+GPU 	 1.5 	 345.3
+Type 	 Time 	 Minimum
+GPU 	 1.4 	 281.4
+Type 	 Time 	 Minimum
+GPU 	 1.4 	 258.6
+Type 	 Time 	 Minimum
+GPU 	 1.4 	 228
+Type 	 Time 	 Minimum
+GPU 	 1.4 	 331.2
+Type 	 Time 	 Minimum
+GPU 	 1.4 	 233.3
+
+POP 30
+FC SPHERE
+DIM 50
+Type 	 Time 	 Minimum
+GPU 	 0.54 	 43.96
+Type 	 Time 	 Minimum
+GPU 	 0.43 	 110.3
+Type 	 Time 	 Minimum
+GPU 	 0.43 	 101.3
+Type 	 Time 	 Minimum
+GPU 	 0.43 	 71.82
+Type 	 Time 	 Minimum
+GPU 	 0.43 	 68.67
+Type 	 Time 	 Minimum
+GPU 	 0.43 	 93.14
+Type 	 Time 	 Minimum
+GPU 	 0.43 	 80.07
+Type 	 Time 	 Minimum
+GPU 	 0.43 	 117.4
+Type 	 Time 	 Minimum
+GPU 	 0.43 	 42.96
+Type 	 Time 	 Minimum
+GPU 	 0.43 	 48.24
+
+POP 50
+FC SPHERE
+DIM 50
+Type 	 Time 	 Minimum
+GPU 	 0.63 	 232.8
+Type 	 Time 	 Minimum
+GPU 	 0.52 	 332.6
+Type 	 Time 	 Minimum
+GPU 	 0.52 	 353.6
+Type 	 Time 	 Minimum
+GPU 	 0.52 	 195.2
+Type 	 Time 	 Minimum
+GPU 	 0.51 	 156.6
+Type 	 Time 	 Minimum
+GPU 	 0.52 	 360.9
+Type 	 Time 	 Minimum
+GPU 	 0.52 	 348.8
+Type 	 Time 	 Minimum
+GPU 	 0.52 	 134.4
+Type 	 Time 	 Minimum
+GPU 	 0.52 	 225.3
+Type 	 Time 	 Minimum
+GPU 	 0.52 	 327.6
+
+POP 70
+FC SPHERE
+DIM 50
+Type 	 Time 	 Minimum
+GPU 	 0.7 	 317.7
+Type 	 Time 	 Minimum
+GPU 	 0.61 	 338.7
+Type 	 Time 	 Minimum
+GPU 	 0.61 	 334.9
+Type 	 Time 	 Minimum
+GPU 	 0.61 	 384.3
+Type 	 Time 	 Minimum
+GPU 	 0.61 	 340
+Type 	 Time 	 Minimum
+GPU 	 0.61 	 369.3
+Type 	 Time 	 Minimum
+GPU 	 0.61 	 328
+Type 	 Time 	 Minimum
+GPU 	 0.61 	 351.5
+Type 	 Time 	 Minimum
+GPU 	 0.61 	 336.3
+Type 	 Time 	 Minimum
+GPU 	 0.61 	 340.2
+
+POP 30
+FC ROSENBROCK
+DIM 50
+Type 	 Time 	 Minimum
+GPU 	 11 	 3.706e+04
+Type 	 Time 	 Minimum
+GPU 	 11 	 5.133e+04
+Type 	 Time 	 Minimum
+GPU 	 11 	 6.101e+04
+Type 	 Time 	 Minimum
+GPU 	 11 	 7.342e+04
+Type 	 Time 	 Minimum
+GPU 	 11 	 6.98e+04
+Type 	 Time 	 Minimum
+GPU 	 11 	 4.064e+04
+Type 	 Time 	 Minimum
+GPU 	 11 	 1.484e+04
+Type 	 Time 	 Minimum
+GPU 	 11 	 7.048e+04
+Type 	 Time 	 Minimum
+GPU 	 11 	 2.64e+04
+Type 	 Time 	 Minimum
+GPU 	 11 	 1.306e+05
+
+POP 50
+FC ROSENBROCK
+DIM 50
+Type 	 Time 	 Minimum
+GPU 	 14 	 4.347e+05
+Type 	 Time 	 Minimum
+GPU 	 14 	 3.992e+05
+Type 	 Time 	 Minimum
+GPU 	 14 	 4.238e+05
+Type 	 Time 	 Minimum
+GPU 	 14 	 4.762e+05
+Type 	 Time 	 Minimum
+GPU 	 14 	 6.384e+05
+Type 	 Time 	 Minimum
+GPU 	 14 	 7.35e+05
+Type 	 Time 	 Minimum
+GPU 	 14 	 4.998e+05
+Type 	 Time 	 Minimum
+GPU 	 14 	 6.007e+05
+Type 	 Time 	 Minimum
+GPU 	 14 	 6.012e+05
+Type 	 Time 	 Minimum
+GPU 	 14 	 5.311e+05
+
+POP 70
+FC ROSENBROCK
+DIM 50
+Type 	 Time 	 Minimum
+GPU 	 21 	 5.466e+05
+Type 	 Time 	 Minimum
+GPU 	 21 	 6.382e+05
+Type 	 Time 	 Minimum
+GPU 	 21 	 6.441e+05
+Type 	 Time 	 Minimum
+GPU 	 21 	 5.035e+05
+Type 	 Time 	 Minimum
+GPU 	 21 	 6.219e+05
+Type 	 Time 	 Minimum
+GPU 	 21 	 5.511e+05
+Type 	 Time 	 Minimum
+GPU 	 21 	 5.338e+05
+Type 	 Time 	 Minimum
+GPU 	 21 	 5.922e+05
+Type 	 Time 	 Minimum
+GPU 	 21 	 5.326e+05
+Type 	 Time 	 Minimum
+GPU 	 21 	 7.055e+05
+
+POP 30
+FC ACKLEY
+DIM 50
+Type 	 Time 	 Minimum
+GPU 	 1.6 	 5.576
+Type 	 Time 	 Minimum
+GPU 	 1.5 	 6.33
+Type 	 Time 	 Minimum
+GPU 	 1.5 	 7.605
+Type 	 Time 	 Minimum
+GPU 	 1.5 	 6.435
+Type 	 Time 	 Minimum
+GPU 	 1.5 	 5.761
+Type 	 Time 	 Minimum
+GPU 	 1.5 	 6.869
+Type 	 Time 	 Minimum
+GPU 	 1.5 	 5.67
+Type 	 Time 	 Minimum
+GPU 	 1.5 	 6.481
+Type 	 Time 	 Minimum
+GPU 	 1.5 	 6.206
+Type 	 Time 	 Minimum
+GPU 	 1.5 	 6.464
+
+POP 50
+FC ACKLEY
+DIM 50
+Type 	 Time 	 Minimum
+GPU 	 2.0 	 9.945
+Type 	 Time 	 Minimum
+GPU 	 1.9 	 9.669
+Type 	 Time 	 Minimum
+GPU 	 1.9 	 9.993
+Type 	 Time 	 Minimum
+GPU 	 1.9 	 9.846
+Type 	 Time 	 Minimum
+GPU 	 1.9 	 9.533
+Type 	 Time 	 Minimum
+GPU 	 1.9 	 10.03
+Type 	 Time 	 Minimum
+GPU 	 1.9 	 9.352
+Type 	 Time 	 Minimum
+GPU 	 1.9 	 9.859
+Type 	 Time 	 Minimum
+GPU 	 1.9 	 9.432
+Type 	 Time 	 Minimum
+GPU 	 1.9 	 9.928
+
+POP 70
+FC ACKLEY
+DIM 50
+Type 	 Time 	 Minimum
+GPU 	 2.9 	 9.964
+Type 	 Time 	 Minimum
+GPU 	 2.8 	 9.826
+Type 	 Time 	 Minimum
+GPU 	 2.8 	 10.11
+Type 	 Time 	 Minimum
+GPU 	 2.8 	 9.543
+Type 	 Time 	 Minimum
+GPU 	 2.8 	 9.857
+Type 	 Time 	 Minimum
+GPU 	 2.8 	 10.07
+Type 	 Time 	 Minimum
+GPU 	 2.8 	 9.765
+Type 	 Time 	 Minimum
+GPU 	 2.8 	 10.14
+Type 	 Time 	 Minimum
+GPU 	 2.8 	 9.863
+Type 	 Time 	 Minimum
+GPU 	 2.8 	 10.05
+
+POP 30
+FC RASTRIGIN
+DIM 50
+Type 	 Time 	 Minimum
+GPU 	 1.6 	 556.5
+Type 	 Time 	 Minimum
+GPU 	 1.5 	 624.9
+Type 	 Time 	 Minimum
+GPU 	 1.5 	 583.9
+Type 	 Time 	 Minimum
+GPU 	 1.5 	 507.4
+Type 	 Time 	 Minimum
+GPU 	 1.5 	 438
+Type 	 Time 	 Minimum
+GPU 	 1.5 	 719.4
+Type 	 Time 	 Minimum
+GPU 	 1.5 	 485.6
+Type 	 Time 	 Minimum
+GPU 	 1.5 	 501.5
+Type 	 Time 	 Minimum
+GPU 	 1.5 	 441.9
+Type 	 Time 	 Minimum
+GPU 	 1.5 	 669.6
+
+POP 50
+FC RASTRIGIN
+DIM 50
+Type 	 Time 	 Minimum
+GPU 	 2 	 778
+Type 	 Time 	 Minimum
+GPU 	 1.9 	 755.1
+Type 	 Time 	 Minimum
+GPU 	 1.9 	 713.8
+Type 	 Time 	 Minimum
+GPU 	 1.9 	 788.6
+Type 	 Time 	 Minimum
+GPU 	 1.9 	 797.3
+Type 	 Time 	 Minimum
+GPU 	 1.9 	 774.5
+Type 	 Time 	 Minimum
+GPU 	 1.9 	 735.8
+Type 	 Time 	 Minimum
+GPU 	 1.9 	 764.4
+Type 	 Time 	 Minimum
+GPU 	 1.9 	 774.2
+Type 	 Time 	 Minimum
+GPU 	 1.9 	 748.6
+
+POP 70
+FC RASTRIGIN
+DIM 50
+Type 	 Time 	 Minimum
+GPU 	 2.9 	 793.6
+Type 	 Time 	 Minimum
+GPU 	 2.8 	 788.8
+Type 	 Time 	 Minimum
+GPU 	 2.8 	 658
+Type 	 Time 	 Minimum
+GPU 	 2.8 	 776.4
+Type 	 Time 	 Minimum
+GPU 	 2.8 	 717
+Type 	 Time 	 Minimum
+GPU 	 2.8 	 778.1
+Type 	 Time 	 Minimum
+GPU 	 2.8 	 699.7
+Type 	 Time 	 Minimum
+GPU 	 2.8 	 755.2
+Type 	 Time 	 Minimum
+GPU 	 2.8 	 736.5
+Type 	 Time 	 Minimum
+GPU 	 2.8 	 776.9
