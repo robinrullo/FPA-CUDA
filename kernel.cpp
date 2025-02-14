@@ -8,59 +8,71 @@
 4: Shifted Sphere's Function
 */
 // parametre 1 individu avec ses positions
-double host_fitness_function(const double x[]) {
-    double res = 0;
-    double somme = 0;
-    double produit = 0;
-
-    switch (SELECTED_OBJ_FUNC) {
-        case 0: {
-            double y1 = 1 + (x[0] - 1) / 4;
-            double yn = 1 + (x[NUM_OF_DIMENSIONS - 1] - 1) / 4;
-
-            res += pow(sin(phi * y1), 2);
-
-            for (int i = 0; i < NUM_OF_DIMENSIONS - 1; i++) {
-                double y = 1 + (x[i] - 1) / 4;
-                double yp = 1 + (x[i + 1] - 1) / 4;
-                res += pow(y - 1, 2) * (1 + 10 * pow(sin(phi * yp), 2)) + pow(yn - 1, 2);
-            }
-            break;
-        }
-        case 1: {
-            for (int i = 0; i < NUM_OF_DIMENSIONS; i++) {
-                double zi = x[i] - 0;
-                res += pow(zi, 2) - 10 * cos(2 * phi * zi) + 10;
-            }
-            res -= 330;
-            break;
-        }
-        case 2:
-            for (int i = 0; i < NUM_OF_DIMENSIONS - 1; i++) {
-                double zi = x[i] - 0 + 1;
-                double zip1 = x[i + 1] - 0 + 1;
-                res += 100 * (pow(pow(zi, 2) - zip1, 2)) + pow(zi - 1, 2);
-            }
-            res += 390;
-            break;
-        case 3:
-            for (int i = 0; i < NUM_OF_DIMENSIONS; i++) {
-                double zi = x[i] - 0;
-                somme += pow(zi, 2) / 4000;
-                produit *= cos(zi / pow(i + 1, 0.5));
-            }
-            res = somme - produit + 1 - 180;
-            break;
-        case 4:
-            for (int i = 0; i < NUM_OF_DIMENSIONS; i++) {
-                double zi = x[i] - 0;
-                res += pow(zi, 2);
-            }
-            res -= 450;
-            break;
+/**
+ * Runs on the GPU, called from the GPU.
+ **/
+double host_sphere_func(const double *solution) {
+    double sum = 0.0;
+    for (int i = 0; i < NUM_OF_DIMENSIONS; ++i) {
+        double x = solution[i];
+        sum += x * x;
     }
+    //printf("sum: %f\n", sum);
+    return sum;
+}
 
-    return res;
+double host_rosenbrock_func(const double *solution) {
+    double sum = 0.0;
+    for (int i = 0; i < NUM_OF_DIMENSIONS - 1; ++i) {
+        double xi = (solution[i]);
+        double xi1 = (solution[i + 1]);
+        double term1 = 100.0 * pow(xi1 - pow(xi, 2.0), 2.0);
+        double term2 = pow(1.0 - xi, 2.0);
+        sum += term1 + term2;
+    }
+    return sum;
+}
+
+double host_rastrigin_func(const double *solution) {
+    double sum = 0.0;
+    for (int i = 0; i < NUM_OF_DIMENSIONS; ++i) {
+        double sol = (solution[i]);
+        sum += (sol * sol - 10.0 * cos(2.0 * phi * sol) + 10.0);
+    }
+    return sum;
+}
+
+double host_ackley_func(const double *solution) {
+    double sum1 = 0.0;
+    double sum2 = 0.0;
+    for (int i = 0; i < NUM_OF_DIMENSIONS; ++i) {
+        double sol = (solution[i]);
+        sum1 += sol * sol;
+        sum2 += cos(2.0 * phi * sol);
+    }
+    double term1 = -20.0 * exp(-0.2 * sqrt(sum1 / NUM_OF_DIMENSIONS));
+    double term2 = -exp(sum2 / NUM_OF_DIMENSIONS);
+    return term1 + term2 + 20.0 + M_E;
+}
+
+/* Objective function
+0: Levy 3-dimensional
+1: Shifted Rastigrin's Function
+2: Shifted Rosenbrock's Function
+3: Shifted Griewank's Function
+4: Shifted Sphere's Function
+*/
+double host_fitness_function(const double *solution) {
+    switch (SELECTED_OBJ_FUNC) {
+        case 0:
+            return host_ackley_func(solution);
+        case 1:
+            return host_rastrigin_func(solution);
+        case 2:
+            return host_rosenbrock_func(solution);
+        default:
+            return host_sphere_func(solution);
+    }
 }
 
 // Obtenir un random entre low et high

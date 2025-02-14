@@ -1,6 +1,9 @@
+#include <limits>
+#include <iomanip>
+
 #include "kernel.h"
 
-int main(int argc, char **argv) {
+int main(const int argc, char **argv) {
     if (argc == 3) {
         int dim = std::stoi(argv[1]);
         int pop = std::stoi(argv[2]);
@@ -14,7 +17,7 @@ int main(int argc, char **argv) {
     printf("Type \t Time \t  \t Minimum\n");
 
     // Initialisation du random
-    srand((unsigned) time(NULL));
+    srand(static_cast<unsigned>(time(nullptr)));
 
     for (int i = 0; i < POPULATION_SIZE * NUM_OF_DIMENSIONS; i++) {
         positions[i] = getRandom(START_RANGE_MIN, START_RANGE_MAX);
@@ -24,13 +27,13 @@ int main(int argc, char **argv) {
     for (int k = 0; k < NUM_OF_DIMENSIONS; k++)
         gBest[k] = pBests[k];
 
-    clock_t begin = clock();
-    cuda_pso(positions, pBests, gBest);
-    clock_t end = clock();
+    const clock_t begin = clock();
+    cuda_pso(positions, pBests, gBest); // gBest become the best fitness
+    const clock_t end = clock();
     printf("GPU \t ");
-    printf("%10.3lf \t", (double) (end - begin) / CLOCKS_PER_SEC);
+    printf("%10.3lf \t", static_cast<double>(end - begin) / CLOCKS_PER_SEC);
 
-    printf(" %f\n", host_fitness_function(gBest));
+    std::cout << std::setprecision(17) << host_fitness_function(gBest);
 
     return 0;
 }
