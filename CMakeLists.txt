@@ -2,7 +2,9 @@ cmake_minimum_required(VERSION 3.30)
 project(CudaFPA LANGUAGES CUDA CXX)
 
 set(CMAKE_CUDA_STANDARD 20)
-set(CMAKE_CUDA_ARCHITECTURES "native") # GTX1050 - Architecture 6.1
+
+# GTX1050 - Architecture 6.1 (sm_61)
+set(CMAKE_CUDA_ARCHITECTURES "native")
 
 add_executable(CudaFPA
         main.cpp

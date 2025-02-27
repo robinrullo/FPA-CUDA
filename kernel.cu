@@ -11,6 +11,9 @@
 
 #define gpuErrorCheck(ans) { gpuAssert((ans), __FILE__, __LINE__); }
 
+/**
+ * Vérifie les erreurs CUDA et affiche un message si une erreur est détectée.
+ */
 inline void gpuAssert(const cudaError_t code, const char *file, const int line, const bool abort = true) {
     if (code != cudaSuccess) {
         fprintf(stderr, "GPUassert: %s %s %d\n", cudaGetErrorString(code), file, line);
@@ -18,64 +21,71 @@ inline void gpuAssert(const cudaError_t code, const char *file, const int line, 
     }
 }
 
+// Variables globales pour stocker temporairement les solutions sur le GPU
 __device__ double tempSolution1[NUM_OF_DIMENSIONS];
 __device__ double tempSolution2[NUM_OF_DIMENSIONS];
 
 
 /**
- * Runs on the GPU, called from the GPU.
- **/
+ * Fonction de coût Sphere exécutée sur le GPU.
+ */
 __device__ double sphere_func(const double *solution) {
     double sum = 0.0;
     for (int i = 0; i < NUM_OF_DIMENSIONS; ++i) {
-        double x = solution[i];
+        const double x = solution[i];
         sum += x * x;
     }
-    //printf("sum: %f\n", sum);
     return sum;
 }
 
+/**
+ * Fonction de coût Rosenbrock exécutée sur le GPU.
+ */
 __device__ double rosenbrock_func(const double *solution) {
     double sum = 0.0;
     for (int i = 0; i < NUM_OF_DIMENSIONS - 1; ++i) {
-        double xi = (solution[i]);
-        double xi1 = (solution[i + 1]);
-        double term1 = 100.0 * pow(xi1 - pow(xi, 2.0), 2.0);
-        double term2 = pow(1.0 - xi, 2.0);
+        const double xi = (solution[i]);
+        const double xi1 = (solution[i + 1]);
+        const double term1 = 100.0 * pow(xi1 - pow(xi, 2.0), 2.0);
+        const double term2 = pow(1.0 - xi, 2.0);
         sum += term1 + term2;
     }
     return sum;
 }
 
+/**
+ * Fonction de coût Rastrigin exécutée sur le GPU.
+ */
 __device__ double rastrigin_func(const double *solution) {
     double sum = 0.0;
     for (int i = 0; i < NUM_OF_DIMENSIONS; ++i) {
-        double sol = (solution[i]);
-        sum += (sol * sol - 10.0 * cos(2.0 * phi * sol) + 10.0);
+        const double sol = (solution[i]);
+        sum += (sol * sol - 10.0 * cos(2.0 * M_PI * sol) + 10.0);
     }
     return sum;
 }
 
+/**
+ * Fonction de coût Ackley exécutée sur le GPU.
+ */
 __device__ double ackley_func(const double *solution) {
     double sum1 = 0.0;
     double sum2 = 0.0;
     for (int i = 0; i < NUM_OF_DIMENSIONS; ++i) {
-        double sol = (solution[i]);
+        const double sol = (solution[i]);
         sum1 += sol * sol;
-        sum2 += cos(2.0 * phi * sol);
+        sum2 += cos(2.0 * M_PI * sol);
     }
-    double term1 = -20.0 * exp(-0.2 * sqrt(sum1 / NUM_OF_DIMENSIONS));
-    double term2 = -exp(sum2 / NUM_OF_DIMENSIONS);
+    const double term1 = -20.0 * exp(-0.2 * sqrt(sum1 / NUM_OF_DIMENSIONS));
+    const double term2 = -exp(sum2 / NUM_OF_DIMENSIONS);
     return term1 + term2 + 20.0 + M_E;
 }
 
-/* Objective function
-0: Levy 3-dimensional
-1: Shifted Rastigrin's Function
-2: Shifted Rosenbrock's Function
-3: Shifted Griewank's Function
-4: Shifted Sphere's Function
-*/
+/**
+ * Sélectionne la fonction de coût à utiliser selon la constante SELECTED_OBJ_FUNC.
+ * @param solution 0 - Ackley Function, 1 - Rastigrin Function, 2 - Rosenbrock Function, 3 - Sphere Function
+ * @return Fitness
+ */
 __device__ double fitness_function(const double *solution) {
     switch (SELECTED_OBJ_FUNC) {
         case 0:
@@ -93,18 +103,19 @@ __device__ double fitness_function(const double *solution) {
  * Runs on the GPU, called from the CPU or the GPU *
  ***************************************************/
 /**
- * CUDA kernel to setup the GPU random generator
- **/
+ * Initialise les générateurs aléatoires CUDA pour chaque thread.
+ */
 __global__ void setupRandomStates(curandState *states, const unsigned long seed, const int totalThreads) {
-    const uint idx = threadIdx.x + blockIdx.x * blockDim.x;
-    if (idx < totalThreads) {
+    if (const uint idx = threadIdx.x + blockIdx.x * blockDim.x; idx < totalThreads) {
         curand_init(seed + idx, idx, 0, &states[idx]);
     }
 }
 
-__global__ void kernelEnsureNewPosBounds(double *positions, curandState *states) {
+/**
+ * Met à jour la position des particules en appliquant l'algorithme PSO avec Lévy flight.
+ */
+__global__ void kernelEnsureNewPosBounds(double *positions) {
     const uint i = blockIdx.x * blockDim.x + threadIdx.x;
-    curandState *state = &states[i];
     if (i >= POPULATION_SIZE * NUM_OF_DIMENSIONS) return;
 
     if (positions[i] < START_RANGE_MIN || positions[i] > START_RANGE_MAX) {
@@ -120,54 +131,36 @@ __global__ void kernelUpdatePopulation(
     curandState *states
 ) {
     const uint i = blockIdx.x * blockDim.x + threadIdx.x;
-    curandState *state = &states[i];
 
-    // avoid an out of bound for the array
     if (i >= POPULATION_SIZE * NUM_OF_DIMENSIONS)
         return;
 
+    curandState *state = &states[i];
+
+    // Pollinisation Croisée - Mise à jour selon la règle du Lévy flight
     if (curand_uniform(state) < GLOBAL_POLLINATION_RATE) {
         const double sigma = pow((tgamma(1 + LEVY_BETA) * sin(CUDART_PI * LEVY_BETA / 2)) /
                                  (tgamma((1 + LEVY_BETA) / 2) * LEVY_BETA * pow(2, (LEVY_BETA - 1) / 2)),
                                  (1 / LEVY_BETA));
 
         // Génération des valeurs u et v
-        const double u = curand_normal_double(state) * sigma; // normal distribution
-        const double v = curand_uniform_double(state) + 1e-10; // uniform distribution and avoid div by 0
+        const double u = curand_normal_double(state) * sigma;
+        const double v = curand_uniform_double(state) + 1e-10;
 
-        // Compute levy steps
+        // Calcul du pas de Levy
         const double levy = LEVY_MULTIPLIER * (u / pow(fabs(v), (1 / LEVY_BETA)));
 
-        // Mise à jour de la position
-        //positions[i] = positions[i] + 1. / sqrtf(epoch) * levy * (pBests[i] - gBest[i % NUM_OF_DIMENSIONS]);
-        //positions[i] = positions[i] + levy * (pBests[i] - gBest[i % NUM_OF_DIMENSIONS]);
+        // Mise à jour de la position avec le vol de Lévi
         positions[i] = pBests[i] + levy * (pBests[i] - gBest[i % NUM_OF_DIMENSIONS]);
-
-        /*printf("[%d-%d-LEVY] - Levy: %f | epoch: %d | position: %f | sqrt: %f | gBest: %f\n",
-               epoch, i, levy, epoch, positions[i], sqrtf(epoch), gBest[i % NUM_OF_DIMENSIONS]);*/
     } else {
-        const uint id1 = curand(state) % POPULATION_SIZE;
-        const uint id2 = curand(state) % POPULATION_SIZE;
+        // Autopollinisation
+        const uint id1 = curand(state) % POPULATION_SIZE; // Index de la première fleur choisie au hasard
+        const uint id2 = curand(state) % POPULATION_SIZE; // Index de la seconde fleur choisie au hasard
 
         positions[i] = pBests[i] + curand_uniform_double(state) * (
                            pBests[id1 * NUM_OF_DIMENSIONS + (i % NUM_OF_DIMENSIONS)] -
                            pBests[id2 * NUM_OF_DIMENSIONS + (i % NUM_OF_DIMENSIONS)]
                        );
-
-        /*printf(
-            "[%d-%d-SELF] - id1=%d | id2=%d | posId1=%d | posId2=%d | pos1=%f | pos2=%f | newPos=%f | curand_uniform=%f\n",
-            epoch,
-            i,
-            id1,
-            id2,
-            id1 * NUM_OF_DIMENSIONS + (i % NUM_OF_DIMENSIONS),
-            id2 * NUM_OF_DIMENSIONS + (i % NUM_OF_DIMENSIONS),
-            positions[id1 * NUM_OF_DIMENSIONS + (i % NUM_OF_DIMENSIONS)],
-            positions[id2 * NUM_OF_DIMENSIONS + (i % NUM_OF_DIMENSIONS)],
-            newPos,
-            curand_uniform(state)
-        );
-        positions[i] = newPos;*/
     }
 }
 
@@ -177,46 +170,56 @@ __global__ void kernelUpdatePopulation(
 /***
  * Update pBest if new value is better than previous epoch else reuse previous
  **/
-__global__ void kernelUpdatePBest(const double *positions, double *pBests, double *gBest) {
-    const uint i = blockIdx.x * blockDim.x + threadIdx.x;
+__global__ void kernelUpdatePBest(const double *positions, double *pBests) {
+    const uint idx = blockIdx.x * blockDim.x + threadIdx.x;
 
-    if (i >= POPULATION_SIZE * NUM_OF_DIMENSIONS || i % NUM_OF_DIMENSIONS != 0)
+    // Uniquement à la taille de la population (sans la dimension)
+    if (idx >= POPULATION_SIZE * NUM_OF_DIMENSIONS || idx % NUM_OF_DIMENSIONS != 0)
         return;
 
+    // Copie les positions de la solution actuelle et de la meilleure solution connue
     for (int j = 0; j < NUM_OF_DIMENSIONS; j++) {
-        tempSolution1[j] = positions[i + j];
-        tempSolution2[j] = pBests[i + j];
+        tempSolution1[j] = positions[idx + j];
+        tempSolution2[j] = pBests[idx + j];
     }
 
+    // Mise à jour de pBest si la nouvelle position est meilleure
     if (fitness_function(tempSolution1) < fitness_function(tempSolution2)) {
         for (int k = 0; k < NUM_OF_DIMENSIONS; k++)
-            pBests[i + k] = positions[i + k];
+            pBests[idx + k] = positions[idx + k];
     }
 }
 
+/**
+ * Met à jour la meilleure solution globale gBest en parcourant pBests.
+ * Seule la première dimension de chaque particule est traitée pour éviter des mises à jour redondantes.
+ */
 __global__ void kernelUpdateGBest(const double *pBests, double *gBest) {
     const uint i = blockIdx.x * blockDim.x + threadIdx.x;
     if (i >= POPULATION_SIZE * NUM_OF_DIMENSIONS || i % NUM_OF_DIMENSIONS != 0) return;
 
     double temp[NUM_OF_DIMENSIONS];
 
+    // Copier la solution actuelle depuis pBests
     for (int k = 0; k < NUM_OF_DIMENSIONS; k++)
         temp[k] = pBests[i + k];
 
-    //printf("[%d] - Fitness function: %f\n", i, fitness_function(temp));
-    double gBestFitness = fitness_function(gBest);
-    double tempBestFitness = fitness_function(temp);
-
-    if (tempBestFitness < gBestFitness) {
+    // Mise à jour de gBest si une meilleure solution est trouvée
+    if (fitness_function(temp) < fitness_function(gBest)) {
         for (int k = 0; k < NUM_OF_DIMENSIONS; k++)
             gBest[k] = temp[k];
     }
 }
 
-void cuda_pso(double *positions, double *pBests, double *gBest) {
+/**
+ * Fonction Principale
+ * Implémente l'algorithme Flower Pollination Algorithm (FPA) sur GPU.
+ * Gère la mémoire et exécute les noyaux CUDA nécessaires pour l'optimisation.
+ */
+extern "C" void cuda_fpa(double *positions, double *pBests, double *gBest) {
     constexpr int size = POPULATION_SIZE * NUM_OF_DIMENSIONS;
 
-    // declare all the arrays on the device
+    // Déclaration des pointeurs de mémoire sur le GPU
     double *devPos;
     double *devPBest;
     double *devGBest;
@@ -226,30 +229,30 @@ void cuda_pso(double *positions, double *pBests, double *gBest) {
     curandState *devStates;
 
 
-    // Memory allocation
+    // Allocation mémoire sur le GPU
     cudaMalloc(&devPos, size * sizeof(double));
     cudaMalloc(&devPBest, size * sizeof(double));
     cudaMalloc(&devGBest, NUM_OF_DIMENSIONS * sizeof(double));
     cudaMalloc(&devStates, size * sizeof(curandState));
 
 
-    // Thread & Block number
+    // Définition des dimensions des blocs et grilles CUDA
     int threadsNum = 32;
-    int blocksNum = ceil(size / (double) threadsNum);
+    int blocksNum = ceil(size / static_cast<double>(threadsNum));
 
-    // Copy particle datas from host to device
-    /**
-     * Copy in GPU memory the data from the host
-     **/
+    // Copie des données depuis l'hôte vers le GPU
     cudaMemcpy(devPos, positions, sizeof(double) * size, cudaMemcpyHostToDevice);
     cudaMemcpy(devPBest, pBests, sizeof(double) * size, cudaMemcpyHostToDevice);
     cudaMemcpy(devGBest, gBest, sizeof(double) * NUM_OF_DIMENSIONS, cudaMemcpyHostToDevice);
 
+    // Initialisation des générateurs aléatoire sur GPU
     setupRandomStates<<<blocksNum, threadsNum>>>(devStates, time(nullptr), size);
     gpuErrorCheck(cudaPeekAtLastError());
     gpuErrorCheck(cudaDeviceSynchronize());
 
+    // Boucle principale de l'algorithme
     for (int iter = 0; iter < MAX_EPOCHS; iter++) {
+        // Mise à jour des positions des pollens
         kernelUpdatePopulation<<<blocksNum, threadsNum>>>(
             devPos,
             devPBest,
@@ -260,45 +263,45 @@ void cuda_pso(double *positions, double *pBests, double *gBest) {
         gpuErrorCheck(cudaPeekAtLastError());
         gpuErrorCheck(cudaDeviceSynchronize());
 
-        kernelEnsureNewPosBounds<<<blocksNum, threadsNum>>>(devPos, devStates);
+        // Assurer que les nouvelles positions sont dans les bornes autorisées
+        kernelEnsureNewPosBounds<<<blocksNum, threadsNum>>>(devPos);
         gpuErrorCheck(cudaPeekAtLastError());
         gpuErrorCheck(cudaDeviceSynchronize());
 
-        kernelUpdatePBest<<<blocksNum, threadsNum>>>(devPos, devPBest, devGBest);
+        // Mise à jour du meilleur pBest pour chaque particule
+        kernelUpdatePBest<<<blocksNum, threadsNum>>>(devPos, devPBest);
         gpuErrorCheck(cudaPeekAtLastError());
         gpuErrorCheck(cudaDeviceSynchronize());
 
+        // Mise à jour du meilleur individu global
         kernelUpdateGBest<<<blocksNum, threadsNum>>>(devPBest, devGBest);
         gpuErrorCheck(cudaPeekAtLastError());
         gpuErrorCheck(cudaDeviceSynchronize());
 
-        //cudaMemcpy(pBests, devPBest, sizeof(double) * POPULATION_SIZE * NUM_OF_DIMENSIONS, cudaMemcpyDeviceToHost);
+        // Copier gBest mis à jour du GPU vers l'hôte
         cudaMemcpy(gBest, devGBest, sizeof(double) * NUM_OF_DIMENSIONS, cudaMemcpyDeviceToHost);
-        gpuErrorCheck(cudaPeekAtLastError());
-        gpuErrorCheck(cudaDeviceSynchronize());
         for (int i = 0; i < size; i += NUM_OF_DIMENSIONS) {
             for (int k = 0; k < NUM_OF_DIMENSIONS; k++)
                 temp[k] = pBests[i + k];
 
-            //printf("[%d] - Fitness function: %f\n", i, host_fitness_function(temp));
+            // Vérifier si une meilleure solution existe et mettre à jour gBest
             if (host_fitness_function(temp) < host_fitness_function(gBest)) {
                 for (int k = 0; k < NUM_OF_DIMENSIONS; k++)
                     gBest[k] = temp[k];
             }
         }
 
-        //cudaMemcpy(devGBest, gBest, sizeof(double) * NUM_OF_DIMENSIONS, cudaMemcpyHostToDevice);
+        // Copier pBest mis à jour de l'hôte vers le GPU
         cudaMemcpy(devPBest, pBests, sizeof(double) * NUM_OF_DIMENSIONS, cudaMemcpyHostToDevice);
-        gpuErrorCheck(cudaPeekAtLastError());
-        gpuErrorCheck(cudaDeviceSynchronize());
     }
 
+    // Copie des résultats finaux vers l'hôte
     cudaMemcpy(positions, devPos, sizeof(double) * size, cudaMemcpyDeviceToHost);
     cudaMemcpy(pBests, devPBest, sizeof(double) * size, cudaMemcpyDeviceToHost);
     cudaMemcpy(gBest, devGBest, sizeof(double) * NUM_OF_DIMENSIONS, cudaMemcpyDeviceToHost);
 
 
-    // cleanup
+    // Libération de la mémoire GPU
     cudaFree(devPos);
     cudaFree(devPBest);
     cudaFree(devGBest);
